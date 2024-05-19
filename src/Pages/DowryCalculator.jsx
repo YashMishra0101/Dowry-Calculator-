@@ -1,4 +1,3 @@
-// src/DowryCalculator.js
 import React, { useState } from 'react';
 
 const DowryCalculator = () => {
@@ -15,6 +14,10 @@ const DowryCalculator = () => {
   const calculateDowry = () => {
     const boyCtcValue = parseFloat(boyCtc);
     const girlCtcValue = parseFloat(girlCtc);
+
+    // Debugging Information
+    console.log('Boy Name:', boyName.toLowerCase());
+    console.log('Girl Name:', girlName.toLowerCase());
 
     if (boyName.toLowerCase() === 'yash mishra' && girlName.toLowerCase() === 'shweta choudhary') {
       setResult('Tujhe kya lagta hai Shweta 🥺 mai tere se Dowry lunga..... naa, kabhi naa');
