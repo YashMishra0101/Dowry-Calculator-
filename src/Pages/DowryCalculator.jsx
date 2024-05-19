@@ -16,7 +16,7 @@ const DowryCalculator = () => {
     const boyCtcValue = parseFloat(boyCtc);
     const girlCtcValue = parseFloat(girlCtc);
 
-    if (boyName.toLowerCase() === 'yash mishra' && girlName.toLowerCase() === 'shweta chaudhary') {
+    if (boyName.toLowerCase() === 'yash mishra' && girlName.toLowerCase() === 'shweta choudhary') {
       setResult('Tujhe kya lagta hai Shweta 🥺 mai tere se Dowry lunga..... naa, kabhi naa');
       return;
     }
@@ -34,7 +34,7 @@ const DowryCalculator = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-200 to-blue-400 p-6">
-      <h1 className="text-3xl font-bold mb-8 animate-bounce font-sans text-blue-900">💸 Boys Calculate Your Dowry 😂 💸</h1>
+      <h1 className="text-3xl font-bold mb-8 animate-bounce font-sans text-blue-900 text-center">💸 Boys Calculate Your Dowry 😂 💸</h1>
       <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
