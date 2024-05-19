@@ -46,6 +46,7 @@ const DowryCalculator = () => {
                   type="text"
                   value={boyName}
                   onChange={(e) => setBoyName(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
@@ -55,6 +56,7 @@ const DowryCalculator = () => {
                   type="number"
                   value={boyCtc}
                   onChange={(e) => setBoyCtc(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
@@ -64,6 +66,7 @@ const DowryCalculator = () => {
                   type="number"
                   value={boyAge}
                   onChange={(e) => setBoyAge(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
@@ -72,6 +75,7 @@ const DowryCalculator = () => {
                 <input
                   type="number"
                   value={boyNetWorth}
+                  required
                   onChange={(e) => setBoyNetWorth(e.target.value)}
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
@@ -87,6 +91,7 @@ const DowryCalculator = () => {
                   type="text"
                   value={girlName}
                   onChange={(e) => setGirlName(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
@@ -96,6 +101,7 @@ const DowryCalculator = () => {
                   type="number"
                   value={girlCtc}
                   onChange={(e) => setGirlCtc(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
@@ -105,6 +111,7 @@ const DowryCalculator = () => {
                   type="number"
                   value={girlAge}
                   onChange={(e) => setGirlAge(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
@@ -114,6 +121,7 @@ const DowryCalculator = () => {
                   type="number"
                   value={girlNetWorth}
                   onChange={(e) => setGirlNetWorth(e.target.value)}
+                  required
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 bg-blue-100 hover:bg-blue-200 transition duration-300"
                 />
               </div>
