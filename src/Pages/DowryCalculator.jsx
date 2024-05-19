@@ -41,7 +41,7 @@ const DowryCalculator = () => {
             <h2 className="text-xl font-bold mb-4 text-center text-blue-900">Boy's Side</h2>
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Boy's Name</label>
+                <label className="block text-sm font-medium text-gray-700">Boy's Name & Surname</label>
                 <input
                   type="text"
                   value={boyName}
@@ -86,7 +86,7 @@ const DowryCalculator = () => {
             <h2 className="text-xl font-bold mb-4 text-center text-blue-900">Girl's Side</h2>
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Girl's Name</label>
+                <label className="block text-sm font-medium text-gray-700">Girl's Name & Surname</label>
                 <input
                   type="text"
                   value={girlName}
