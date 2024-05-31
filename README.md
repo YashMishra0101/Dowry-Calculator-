@@ -1,10 +1,17 @@
 # Dowry Calculator 😂
 
+<img src="src/assets/Screenshot (426).png">
+
 This project is a fun little web application built using React and Tailwind CSS. It's a humorous take on the concept of dowry, commonly associated with marriages in some cultures.
 
 ## Purpose
 
 The Dowry Calculator is purely for entertainment purposes and should not be taken seriously. It's designed to provide a light-hearted experience and spark some laughter.
+
+
+## 🌐 Project Live Link
+
+To see a live demo of the project, please visit : https://dowry-calculator.vercel.app/
 
 ## Features
 
