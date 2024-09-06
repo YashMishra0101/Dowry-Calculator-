@@ -74,7 +74,7 @@ const DowryCalculator = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-200 to-blue-400 p-6">
       <h1 className="text-3xl font-bold mb-8 animate-bounce font-sans text-blue-900 text-center">
-        💸 Boys Calculate Your Dowry 😂 💸
+        💸  दहेज / Dowry Calculator😂 💸
       </h1>
       {!loading && !result && (
         <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl w-full">
