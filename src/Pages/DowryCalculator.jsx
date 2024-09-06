@@ -27,40 +27,49 @@ const DowryCalculator = () => {
     return parseFloat(value) * unitMultiplier[unit];
   };
 
+  const formatResult = (value) => {
+  if (value >= 10000000) {
+    return `₹${(value / 10000000).toFixed(2)} Crore`;
+  } else if (value >= 100000) {
+    return `₹${(value / 100000).toFixed(2)} Lakh`;
+  } else if (value >= 1000) {
+    return `₹${(value / 1000).toFixed(2)} Thousand`;
+  }
+  return `₹${value.toFixed(2)}`;
+};
+
   const calculateDowry = () => {
-    setLoading(true);
-    setTimeout(() => {
-      const boyCtcValue = convertToNumber(boyCtc, boyCtcUnit);
-      const girlCtcValue = convertToNumber(girlCtc, girlCtcUnit);
+  setLoading(true);
+  setTimeout(() => {
+    const boyCtcValue = convertToNumber(boyCtc, boyCtcUnit);
+    const girlCtcValue = convertToNumber(girlCtc, girlCtcUnit);
 
-      if (
-        boyName.toLowerCase() === "yash mishra" &&
-        girlName.toLowerCase() === "shweta choudhary"
-      ) {
-        setResult(
-          "Tujhe kya lagta hai Shweta 🥺 mai tere se Dowry lunga..... naa, kabhi naa"
-        );
-        setLoading(false);
-        return;
-      }
-
-      if (girlCtcValue > boyCtcValue) {
-        setResult("Beta Tu Rahende 😂");
-        setLoading(false);
-        return;
-      }
-
-      const minDowry = boyCtcValue / 2 + 100000;
-      const maxDowry = boyCtcValue / 2 + 500000;
-
+    if (
+      boyName.toLowerCase() === "yash mishra" &&
+      girlName.toLowerCase() === "shweta choudhary"
+    ) {
       setResult(
-        `Minimum Dowry: ₹${minDowry.toFixed(
-          2
-        )}\nMaximum Dowry: ₹${maxDowry.toFixed(2)}`
+        "Tujhe kya lagta hai Shweta 🥺 mai tere se Dowry lunga..... naa, kabhi naa"
       );
       setLoading(false);
-    }, 2000);
-  };
+      return;
+    }
+
+    if (girlCtcValue > boyCtcValue) {
+      setResult("Beta Tu Rahende 😂");
+      setLoading(false);
+      return;
+    }
+
+    const minDowry = boyCtcValue / 2 + 100000;
+    const maxDowry = boyCtcValue / 2 + 500000;
+
+    setResult(
+      `Minimum Dowry: ${formatResult(minDowry)}\nMaximum Dowry: ${formatResult(maxDowry)}`
+    );
+    setLoading(false);
+  }, 2000);
+};
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-200 to-blue-400 p-6">
