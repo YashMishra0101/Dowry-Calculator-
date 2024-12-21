@@ -1,4 +1,4 @@
-# Dowry Calculator 😂
+# Dowry Calculator 😎😂
 
 <img src="src/assets/Screenshot (426).png">
 
@@ -35,4 +35,4 @@ This application is created for fun and entertainment only. It does not promote 
 
 This project is created by [Yash Mishra].
 
-Feel free to contribute or suggest improvements! 😄
+Feel free to contribute or suggest improvements 😄.
