@@ -19,14 +19,6 @@ To see a live demo of the project, please visit : https://dowry-calculator.verce
 - Fun messages for special name combinations.
 - Attractive UI with responsive design and hover effects.
 
-## How to Use
-
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies using `npm install`.
-4. Start the development server with `npm run dev`.
-5. Access the application in your browser at `http://localhost:3000`.
-
 ## Disclaimer
 
 This application is created for fun and entertainment only. It does not promote or endorse any real-world practices related to dowry. Please use it responsibly and with a sense of humor.
