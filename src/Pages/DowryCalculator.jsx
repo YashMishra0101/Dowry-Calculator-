@@ -76,11 +76,11 @@ const DowryCalculator = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-200 to-blue-400 p-6">
       <h1 className="text-3xl font-bold mb-2 animate-bounce font-sans text-blue-900 text-center">
-        💸 Dowry दहेज Calculator 😂 💸
+        💸 Dowry (दहेज) Calculator 😂 💸
       </h1>
       <p className="text-center text-md font-bold text-blue-900 mb-5 mt-2 animate-bounce">
-        (Boys can dream of dowry only if their CTC is higher than the girl's
-        CTC. Otherwise, sorry bro, you're just not worthy 😂💔)
+        Boys can dream of dowry only if their CTC is higher than the girl's
+        CTC. Otherwise, sorry bro, you're just not worthy 😂💔
       </p>
 
       {!loading && !result && (
