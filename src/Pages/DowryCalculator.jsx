@@ -28,54 +28,61 @@ const DowryCalculator = () => {
   };
 
   const formatResult = (value) => {
-  if (value >= 10000000) {
-    return `₹${(value / 10000000).toFixed(2)} Crore`;
-  } else if (value >= 100000) {
-    return `₹${(value / 100000).toFixed(2)} Lakh`;
-  } else if (value >= 1000) {
-    return `₹${(value / 1000).toFixed(2)} Thousand`;
-  }
-  return `₹${value.toFixed(2)}`;
-};
+    if (value >= 10000000) {
+      return `₹${(value / 10000000).toFixed(2)} Crore`;
+    } else if (value >= 100000) {
+      return `₹${(value / 100000).toFixed(2)} Lakh`;
+    } else if (value >= 1000) {
+      return `₹${(value / 1000).toFixed(2)} Thousand`;
+    }
+    return `₹${value.toFixed(2)}`;
+  };
 
   const calculateDowry = () => {
-  setLoading(true);
-  setTimeout(() => {
-    const boyCtcValue = convertToNumber(boyCtc, boyCtcUnit);
-    const girlCtcValue = convertToNumber(girlCtc, girlCtcUnit);
+    setLoading(true);
+    setTimeout(() => {
+      const boyCtcValue = convertToNumber(boyCtc, boyCtcUnit);
+      const girlCtcValue = convertToNumber(girlCtc, girlCtcUnit);
 
-    if (
-      boyName.toLowerCase() === "yash mishra" &&
-      girlName.toLowerCase() === "shweta choudhary"
-    ) {
+      if (
+        boyName.toLowerCase() === "yash mishra" &&
+        girlName.toLowerCase() === "shweta choudhary"
+      ) {
+        setResult(
+          "Tujhe kya lagta hai Shweta 🥺 mai tere se Dowry lunga..... naa, kabhi naa"
+        );
+        setLoading(false);
+        return;
+      }
+
+      if (girlCtcValue > boyCtcValue) {
+        setResult("Beta Tu Rahende 😂");
+        setLoading(false);
+        return;
+      }
+
+      const minDowry = boyCtcValue / 2 + 100000;
+      const maxDowry = boyCtcValue / 2 + 500000;
+
       setResult(
-        "Tujhe kya lagta hai Shweta 🥺 mai tere se Dowry lunga..... naa, kabhi naa"
+        `Minimum Dowry: ${formatResult(
+          minDowry
+        )}\nMaximum Dowry: ${formatResult(maxDowry)}`
       );
       setLoading(false);
-      return;
-    }
-
-    if (girlCtcValue > boyCtcValue) {
-      setResult("Beta Tu Rahende 😂");
-      setLoading(false);
-      return;
-    }
-
-    const minDowry = boyCtcValue / 2 + 100000;
-    const maxDowry = boyCtcValue / 2 + 500000;
-
-    setResult(
-      `Minimum Dowry: ${formatResult(minDowry)}\nMaximum Dowry: ${formatResult(maxDowry)}`
-    );
-    setLoading(false);
-  }, 2000);
-};
+    }, 2000);
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-200 to-blue-400 p-6">
-      <h1 className="text-3xl font-bold mb-8 animate-bounce font-sans text-blue-900 text-center">
-        💸  दहेज / Dowry Calculator😂 💸
+      <h1 className="text-3xl font-bold mb-2 animate-bounce font-sans text-blue-900 text-center">
+        💸 Dowry दहेज Calculator 😂 💸
       </h1>
+      <p className="text-center text-md font-bold text-blue-900 mb-5 mt-2 animate-bounce">
+        (Boys can dream of dowry only if their CTC is higher than the girl's
+        CTC. Otherwise, sorry bro, you're just not worthy 😂💔)
+      </p>
+
       {!loading && !result && (
         <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
